@@ -11,8 +11,8 @@ class Message {
         this.body = body;
     }
 
-    show(){
-        console.log(`${this.time} ${this.author}: ${this.body}`);
+    toString(){
+      return `${this.time} ${this.author}: ${this.body}`;
     }
 
 }
@@ -27,7 +27,7 @@ class Messenger{
 
     show_history(){
         this.messages.forEach(message => {
-            message.show();
+            console.log(message.toString());
         });
     }
 
